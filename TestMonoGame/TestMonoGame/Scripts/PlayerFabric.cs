@@ -14,6 +14,8 @@ namespace TestMonoGame.Scripts
             PlayerController controller = new PlayerController(game);
             inputManager._movementValue += controller.MoveInput;
             inputManager._mousePosValue += controller.MouseInput;
+            inputManager._shootAction += controller.OnShoot;
+
             return controller;
         }
     }

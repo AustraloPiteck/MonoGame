@@ -1,3 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/BackGround","D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/bin/DesktopGL/BackGround.xnb","TextureProcessor","Texture2DContent",127885,8294485,0,3393812
-"D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/PlayerSprite.png","D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/bin/DesktopGL/PlayerSprite.xnb","TextureProcessor","Texture2DContent",9545,821685,0,0414246
+"D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/BackGround","D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/bin/DesktopGL/BackGround.xnb","TextureProcessor","Texture2DContent",127885,8294485,0,3872721
+"D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/BulletPlayer.png","D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/bin/DesktopGL/BulletPlayer.xnb","TextureProcessor","Texture2DContent",1036,561685,0,0334761
+"D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/PlayerSprite","D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/bin/DesktopGL/PlayerSprite.xnb","TextureProcessor","Texture2DContent",9545,821685,0,0377174

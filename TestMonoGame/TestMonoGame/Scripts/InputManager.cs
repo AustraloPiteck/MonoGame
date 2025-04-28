@@ -19,6 +19,8 @@ namespace TestMonoGame.Scripts
 
         public event Action<Vector2> _movementValue;
         public event Action<Vector2> _mousePosValue;
+        public event Action _shootAction;
+
         private Vector2 _inputDelta;
         private Vector2 _inputMouseDelta;
 
@@ -37,7 +39,6 @@ namespace TestMonoGame.Scripts
             if (_keyState.IsKeyDown(Keys.D)) Horizontal += 1;
             if (_keyState.IsKeyDown(Keys.W)) Vertical -= 1;
             if (_keyState.IsKeyDown(Keys.S)) Vertical += 1;
-           
 
             if (Horizontal != _inputDelta.X || Vertical != _inputDelta.Y)
             {
@@ -50,6 +51,9 @@ namespace TestMonoGame.Scripts
             }
             
             _mouseState = Mouse.GetState();
+
+            if (_mouseState.LeftButton == ButtonState.Pressed) _shootAction.Invoke();
+
             _currentMousePos = _mouseState.Position.ToVector2();
             if (_currentMousePos != _inputMouseDelta)
             {

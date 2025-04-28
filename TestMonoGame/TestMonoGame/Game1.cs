@@ -47,7 +47,7 @@ public class Game1 : Game
         _renderQueue = new List<RenderItem>();
         _graphics.PreferredBackBufferWidth = 1000;
         _graphics.PreferredBackBufferHeight = 600;
-        _graphics.IsFullScreen = false;
+        _graphics.IsFullScreen = true;
         _graphics.ApplyChanges();
     }
 
@@ -56,7 +56,7 @@ public class Game1 : Game
         if (_updateables.Contains(updatableItem)) return;
         _updateables.Add(updatableItem);
     }
-    private void RemoveUpdatable(IUpdatableItem updatableItem)
+    internal void RemoveUpdatable(IUpdatableItem updatableItem)
     {
         if (!_updateables.Contains(updatableItem)) return;
         _updateables.Remove(updatableItem);
@@ -66,7 +66,7 @@ public class Game1 : Game
         if (_renderQueue.Contains(render)) return;
         _renderQueue.Add(render);
     }
-    private void RemoveRender(RenderItem render)
+    internal void RemoveRender(RenderItem render)
     {
         if (!_renderQueue.Contains(render)) return;
         _renderQueue.Add(render);
@@ -111,7 +111,7 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.Black);
         if(_renderQueue.Count > 0)
         {
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
             for(int i = 0; i < _renderQueue.Count; i++)
             {
                 RenderItem r = _renderQueue[i];

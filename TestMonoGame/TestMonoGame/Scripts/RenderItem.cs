@@ -25,6 +25,7 @@ namespace TestMonoGame.Scripts
             this.GetRotation = GetRotation;
             this.GetOrigin = GetOrigin;
         }
+      
         public RenderItem(Texture2D Texture, Func<Vector2> GetPosition,Rectangle Rectangle,
              Color Color, Func<float> GetRotation, Vector2 GetOrigin, Vector2 Scale)
         {

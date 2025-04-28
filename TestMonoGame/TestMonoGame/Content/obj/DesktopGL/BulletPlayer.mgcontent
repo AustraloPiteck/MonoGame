@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/PlayerSprite</SourceFile>
-  <SourceTime>2025-04-28T10:26:38.5177562+03:00</SourceTime>
-  <DestFile>D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/bin/DesktopGL/PlayerSprite.xnb</DestFile>
-  <DestTime>2025-04-28T14:41:31.5558041+03:00</DestTime>
+  <SourceFile>D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/BulletPlayer.png</SourceFile>
+  <SourceTime>2025-04-28T14:39:57.9316188+03:00</SourceTime>
+  <DestFile>D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/bin/DesktopGL/BulletPlayer.xnb</DestFile>
+  <DestTime>2025-04-28T14:41:31.5172876+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2025-04-05T13:10:54+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -5,10 +5,12 @@
   <Config />
   <SourceFiles>
     <File>D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/BackGround</File>
-    <File>D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/PlayerSprite.png</File>
+    <File>D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/BulletPlayer.png</File>
+    <File>D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/PlayerSprite</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
-    <File>PlayerSprite</File>
+    <File>BulletPlayer</File>
+    <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

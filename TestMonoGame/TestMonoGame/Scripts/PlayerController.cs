@@ -22,12 +22,16 @@ namespace TestMonoGame.Scripts
         private Game1 _mainGame;
 
         private Vector2 _mousePos;
+
+        
+        private BulletFabric _bulletFabric;
         
       
         
         public PlayerController(Game1 mainGame)
         {
-           _mainGame = mainGame;
+            _mainGame = mainGame;
+            _bulletFabric = new BulletFabric();
             LoadSystem.OnLoadCompleted += WaitAntilLoad;
         }
 
@@ -55,6 +59,11 @@ namespace TestMonoGame.Scripts
             if (_directionMove == Vector2.Zero) return;
             _playerPosition += _directionMove * _speed * deltaTime;
             
+        }
+
+        public void OnShoot()
+        {
+            _bulletFabric.Create(_playerPosition, _playerRotation,_mainGame);
         }
 
         private void Rotate(float deltaTime)
