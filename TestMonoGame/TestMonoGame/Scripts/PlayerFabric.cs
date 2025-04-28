@@ -13,6 +13,7 @@ namespace TestMonoGame.Scripts
         {
             PlayerController controller = new PlayerController(game);
             inputManager._movementValue += controller.MoveInput;
+            inputManager._mousePosValue += controller.MouseInput;
             return controller;
         }
     }

@@ -13,10 +13,10 @@ namespace TestMonoGame.Scripts
         public readonly Vector2 Scale;
         public Func<Vector2> GetPosition;
         public Func<float> GetRotation;
-        public Func<Vector2> GetOrigin;
+        public Vector2 GetOrigin;
 
         public RenderItem(Texture2D Texture, Func<Vector2> GetPosition,
-            Color Color, Func<float> GetRotation, Func<Vector2> GetOrigin, Vector2 Scale)
+            Color Color, Func<float> GetRotation, Vector2 GetOrigin, Vector2 Scale)
         {
             this.Texture = Texture; 
             this.Color = Color;
@@ -26,7 +26,7 @@ namespace TestMonoGame.Scripts
             this.GetOrigin = GetOrigin;
         }
         public RenderItem(Texture2D Texture, Func<Vector2> GetPosition,Rectangle Rectangle,
-             Color Color, Func<float> GetRotation, Func<Vector2> GetOrigin, Vector2 Scale)
+             Color Color, Func<float> GetRotation, Vector2 GetOrigin, Vector2 Scale)
         {
             this.Texture = Texture;
             this.Color = Color;

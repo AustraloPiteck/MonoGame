@@ -119,7 +119,24 @@ public class Game1 : Game
                 if (r.Texture == null)continue;
               
                 _spriteBatch.Draw(r.Texture, r.GetPosition(), r.Rectangle, 
-                    r.Color, r.GetRotation(),r.GetOrigin(), r.Scale,SpriteEffects.None, 0f);
+                    r.Color, r.GetRotation(), 
+                    r.GetOrigin, 
+                    r.Scale,SpriteEffects.None, 0f);
+
+               /* Texture2D pixel = new Texture2D(GraphicsDevice, 1, 1);
+                pixel.SetData(new[] { Color.Red });
+
+                _spriteBatch.Draw(
+                    pixel,
+                    r.GetOrigin,
+                    null,
+                    Color.White,
+                    0f,
+                    Vector2.One * 0.5f,
+                    5f,  // Размер точки
+                    SpriteEffects.None,
+                    0f
+                );*/
             }
             _spriteBatch.End();
         }

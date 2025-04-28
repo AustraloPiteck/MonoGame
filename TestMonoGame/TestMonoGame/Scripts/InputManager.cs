@@ -53,7 +53,8 @@ namespace TestMonoGame.Scripts
             _currentMousePos = _mouseState.Position.ToVector2();
             if (_currentMousePos != _inputMouseDelta)
             {
-                _mousePosValue.Invoke(_currentMousePos);
+                _mousePosValue?.Invoke(_currentMousePos);
+
                 _inputMouseDelta = _currentMousePos;
             }
         }
