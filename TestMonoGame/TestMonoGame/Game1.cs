@@ -69,7 +69,7 @@ public class Game1 : Game
     internal void RemoveRender(RenderItem render)
     {
         if (!_renderQueue.Contains(render)) return;
-        _renderQueue.Add(render);
+        _renderQueue.Remove(render);
     }
 
     protected override void LoadContent()
@@ -115,7 +115,6 @@ public class Game1 : Game
             for(int i = 0; i < _renderQueue.Count; i++)
             {
                 RenderItem r = _renderQueue[i];
-               
                 if (r.Texture == null)continue;
               
                 _spriteBatch.Draw(r.Texture, r.GetPosition(), r.Rectangle, 

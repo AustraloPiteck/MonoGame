@@ -75,7 +75,7 @@ namespace TestMonoGame.Scripts
 
         private async void AwaitWhileCanShoot()
         {
-            await Task.Delay(200);
+            await Task.Delay(100);
             _canShoot = true;
         }
 
