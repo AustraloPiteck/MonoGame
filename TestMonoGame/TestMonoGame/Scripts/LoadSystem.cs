@@ -2,7 +2,10 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Diagnostics;
 using System.Net.Mime;
+using System.Threading.Tasks;
 
 namespace TestMonoGame.Scripts
 {
@@ -10,10 +13,12 @@ namespace TestMonoGame.Scripts
     {
         public static Texture2D PlayerSprite {  get; private set; }
 
+        public static event Action OnLoadCompleted;
 
-        public static void Load(ContentManager content) 
+        public static async Task Load(ContentManager content) 
         {
-            PlayerSprite = content.Load<Texture2D>("PlayerSprite");
+            PlayerSprite = await Task.Run(() => content.Load<Texture2D>("PlayerSprite"));
+            OnLoadCompleted?.Invoke();
         }
     }
 }

@@ -30,3 +30,5 @@ D:\MyProjectsUni\MonoGame\TestMonoGame\TestMonoGame\obj\Debug\net8.0\TestMonoGam
 D:\MyProjectsUni\MonoGame\TestMonoGame\TestMonoGame\obj\Debug\net8.0\TestMonoGame.genruntimeconfig.cache
 D:\MyProjectsUni\MonoGame\TestMonoGame\TestMonoGame\obj\Debug\net8.0\ref\TestMonoGame.dll
 D:\MyProjectsUni\MonoGame\TestMonoGame\TestMonoGame\bin\Debug\net8.0\Content\BackGround.xnb
+D:\MyProjectsUni\MonoGame\TestMonoGame\TestMonoGame\bin\Debug\net8.0\Content\PlayerSprite.xnb
+D:\MyProjectsUni\MonoGame\TestMonoGame\TestMonoGame\obj\Debug\net8.0\TestMonoGame.sourcelink.json

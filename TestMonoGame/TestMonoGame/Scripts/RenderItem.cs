@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using System;
 
 
 namespace TestMonoGame.Scripts
@@ -7,30 +8,33 @@ namespace TestMonoGame.Scripts
     internal struct RenderItem
     {
         public readonly Texture2D Texture;
-        public readonly Vector2 Position;
         public readonly Rectangle? Rectangle;
         public readonly Color Color;
-        public readonly float Rotation;
-        public readonly Vector2 RotationOrigin;
-       
-        public RenderItem(Texture2D Tex,ref Vector2 Pos,
-            Color Col,ref float Rot,ref Vector2 RotOrigin)
+        public readonly Vector2 Scale;
+        public Func<Vector2> GetPosition;
+        public Func<float> GetRotation;
+        public Func<Vector2> GetOrigin;
+
+        public RenderItem(Texture2D Texture, Func<Vector2> GetPosition,
+            Color Color, Func<float> GetRotation, Func<Vector2> GetOrigin, Vector2 Scale)
         {
-            Texture = Tex; 
-            Position = Pos; 
-            Color = Col; 
-            Rotation = Rot;
-            RotationOrigin = RotOrigin;
+            this.Texture = Texture; 
+            this.Color = Color;
+            this.Scale = Scale;
+            this.GetPosition = GetPosition;
+            this.GetRotation = GetRotation;
+            this.GetOrigin = GetOrigin;
         }
-        public RenderItem(Texture2D Tex, ref Vector2 Pos, Rectangle rect,
-           Color Col, ref float Rot, ref Vector2 RotOrigin)
+        public RenderItem(Texture2D Texture, Func<Vector2> GetPosition,Rectangle Rectangle,
+             Color Color, Func<float> GetRotation, Func<Vector2> GetOrigin, Vector2 Scale)
         {
-            Texture = Tex;
-            Position = Pos;
-            Rectangle = rect;
-            Color = Col;
-            Rotation = Rot;
-            RotationOrigin = RotOrigin;
+            this.Texture = Texture;
+            this.Color = Color;
+            this.Scale = Scale;
+            this.Rectangle = Rectangle;
+            this.GetPosition = GetPosition;
+            this.GetRotation = GetRotation;
+            this.GetOrigin = GetOrigin;
         }
     }
 }
