@@ -5,6 +5,7 @@
   <Config />
   <SourceFiles>
     <File>D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/BackGround</File>
+    <File>D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/BulletPlayer</File>
     <File>D:/MyProjectsUni/MonoGame/TestMonoGame/TestMonoGame/Content/PlayerSprite</File>
   </SourceFiles>
 </SourceFileCollection>

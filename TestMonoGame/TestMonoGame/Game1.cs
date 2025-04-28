@@ -47,7 +47,7 @@ public class Game1 : Game
         _renderQueue = new List<RenderItem>();
         _graphics.PreferredBackBufferWidth = 1000;
         _graphics.PreferredBackBufferHeight = 600;
-        _graphics.IsFullScreen = true;
+        _graphics.IsFullScreen = false;
         _graphics.ApplyChanges();
     }
 
@@ -121,7 +121,7 @@ public class Game1 : Game
                 _spriteBatch.Draw(r.Texture, r.GetPosition(), r.Rectangle, 
                     r.Color, r.GetRotation(), 
                     r.GetOrigin, 
-                    r.Scale,SpriteEffects.None, 0f);
+                    r.Scale,r.Flip.Item1 | r.Flip.Item2, 0f);
 
                /* Texture2D pixel = new Texture2D(GraphicsDevice, 1, 1);
                 pixel.SetData(new[] { Color.Red });

@@ -25,6 +25,7 @@ namespace TestMonoGame.Scripts
 
         
         private BulletFabric _bulletFabric;
+        private bool _canShoot = true;
         
       
         
@@ -41,7 +42,8 @@ namespace TestMonoGame.Scripts
                 _playerTexture.Height / 2f)+_offsetOrigin;
 
             _mainGame.AddToRenderQueue(new RenderItem(_playerTexture,() => _playerPosition,
-                Color.White,() => _playerRotation, _playerOrigin, _scale));
+                Color.White,() => _playerRotation, _playerOrigin, 
+                _scale, (SpriteEffects.None, SpriteEffects.None)));
         }
        
 
@@ -63,8 +65,20 @@ namespace TestMonoGame.Scripts
 
         public void OnShoot()
         {
-            _bulletFabric.Create(_playerPosition, _playerRotation,_mainGame);
+            if (_canShoot)
+            {
+                _bulletFabric.Create(_playerPosition, _playerRotation, _mainGame);
+                _canShoot = false;
+                AwaitWhileCanShoot();
+            }
         }
+
+        private async void AwaitWhileCanShoot()
+        {
+            await Task.Delay(200);
+            _canShoot = true;
+        }
+
 
         private void Rotate(float deltaTime)
         {
