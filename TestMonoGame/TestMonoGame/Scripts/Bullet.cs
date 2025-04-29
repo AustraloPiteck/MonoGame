@@ -9,7 +9,7 @@ namespace TestMonoGame.Scripts
     internal class Bullet: IUpdatableItem
     {
         private Texture2D _bulletTexture => LoadSystem.PlayerBulletSprite;
-        private readonly float _bulletSpeed = 1750;
+        private readonly float _bulletSpeed = 2750;
         private readonly Vector2 _bulletScale = new Vector2(0.1f, 0.1f);
         private readonly Vector2 _bulletOffset = new Vector2(100f,10f);
         private readonly Vector2 _bulletOffsetRot = new Vector2(-0.2f, 0.2f);
